@@ -1,9 +1,11 @@
 import React from 'react'
+// add icon 
 import { MdLocalShipping } from 'react-icons/md'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { FiLogIn } from 'react-icons/fi'
 import { FiLogOut } from 'react-icons/fi'
 import { CiUser } from 'react-icons/ci'
+// Configure the Auth0Provider component
 import { useAuth0 } from "@auth0/auth0-react";
 import {Link} from 'react-router-dom'
 import './Nav.css'
