@@ -11,8 +11,7 @@ import {Link} from 'react-router-dom'
 import './Nav.css'
 
 const Nav = () => {
-  // Add Login, logout to Your Application
-  // Show User Profile Information
+  // Add Login, logout to Your Application, Show User Profile Information
   const { loginWithRedirect, logout, user, isAuthenticated} = useAuth0();
 
   return (
