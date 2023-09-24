@@ -8,7 +8,7 @@ import { CiUser } from 'react-icons/ci'
 // Configure the Auth0Provider component
 import { useAuth0 } from "@auth0/auth0-react";
 import {Link} from 'react-router-dom'
-import './Nav.css'
+import './Navbar.css'
 
 const Nav = () => {
   // Add Login, logout to Your Application, Show User Profile Information
