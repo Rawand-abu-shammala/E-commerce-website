@@ -10,10 +10,10 @@ import { useAuth0 } from "@auth0/auth0-react";
 import {Link} from 'react-router-dom'
 import './Navbar.css'
 
-const Nav = () => {
+const Nav = ({search, setSearch, searchProduct}) => {
   // Add Login, logout to Your Application, Show User Profile Information
   const { loginWithRedirect, logout, user, isAuthenticated} = useAuth0();
-
+  
   return (
     <>
     <div className="header">
@@ -30,8 +30,10 @@ const Nav = () => {
           <img src="/assets/logo.webp" alt="" />
         </div>
         <div className="search-box">
-          <input type="text" placeholder='search' />
-          <button><AiOutlineSearch/></button>
+          <input type="text" value={search} placeholder='search' 
+          onChange={(e) => setSearch(e.target.value)}
+          />
+          <button onClick={searchProduct}><AiOutlineSearch/></button>
         </div>
         {/* Show User Profile Information */}
         {
@@ -86,7 +88,7 @@ const Nav = () => {
           <ul>
             <li><Link to='/' className='link'>home</Link></li>
             <li><Link to='/shop' className='link'>shop</Link></li>
-            <li><Link to='/collection' className='link'>collection</Link></li>
+            <li><Link to='/cart' className='link'>cart</Link></li>
             <li><Link to='/about' className='link'>about</Link></li>
             <li><Link to='/contact' className='link'>contact</Link></li>
           </ul>
